@@ -1,0 +1,46 @@
+package com.bareket.gamescore.network.api.score.entities
+
+import com.google.gson.annotations.SerializedName
+import java.util.Date
+
+data class GameSummary(
+    @SerializedName("SID") val sid: Int,
+    @SerializedName("ID") val id: Int,
+    @SerializedName("Comp") val comp: Int,
+    @SerializedName("Season") val season: Int,
+    @SerializedName("Stage") val stage: Int,
+    @SerializedName("Active") val active: Boolean,
+    @SerializedName("STID") val stid: Int,
+    @SerializedName("StatusSequence") val statusSequence: Int,
+    @SerializedName("GT") val gt: Double,
+    @SerializedName("PreciseGT") val preciseGT: Double,
+    @SerializedName("AutoProgressGT") val autoProgressGT: Boolean,
+    @SerializedName("Completion") val completion: Double,
+    @SerializedName("RegularTimeCompletion") val regularTimeCompletion: Double,
+    @SerializedName("GTD") val gtd: String,
+    @SerializedName("STime") val sTime: Date?,
+    @SerializedName("ETime") val eTime: Date,
+    @SerializedName("ShowInGameCountdown") val showInGameCountdown: Int,
+    @SerializedName("Comps") val comps: List<Compatitor>?,
+    @SerializedName("Scrs") val scores: List<Double>,
+    @SerializedName("Round") val round: Int,
+    @SerializedName("EventsCategories") val eventsCategories: Int,
+    @SerializedName("OnTV") val onTV: Boolean,
+    @SerializedName("HasBets") val hasBets: Boolean,
+    @SerializedName("HasBetsTeaser") val hasBetsTeaser: Boolean,
+    @SerializedName("Winner") val winner: Int,
+    @SerializedName("HasTrends") val hasTrends: Boolean,
+    @SerializedName("TopTrendsAvailable") val topTrendsAvailable: Boolean,
+    @SerializedName("HasStatistics") val hasStatistics: Boolean,
+    @SerializedName("HasLineups") val hasLineups: Boolean,
+    @SerializedName("HasFieldPositions") val hasFieldPositions: Boolean,
+    @SerializedName("HasTopPerformers") val hasTopPerformers: Boolean,
+    @SerializedName("HasBuzz") val hasBuzz: Boolean,
+    @SerializedName("SocialStats") val socialStats: SocialStats,
+    @SerializedName("WhoWillWinReults") val whoWillWinResults: WhoWillWinResults,
+    @SerializedName("ShowTracker") val showTracker: Boolean,
+    @SerializedName("HasTable") val hasTable: Boolean,
+    @SerializedName("HomeAwayTeamOrder") val homeAwayTeamOrder: Int,
+    @SerializedName("RoundName") val roundName: String,
+    @SerializedName("WebUrl") val webUrl: String
+)
